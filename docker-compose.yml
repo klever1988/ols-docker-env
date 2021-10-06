@@ -6,7 +6,7 @@ services:
     volumes:
       - "./data/db:/var/lib/mysql:delegated"
     ports:
-       - "3306:3306"
+       - "127.0.0.1:3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -39,4 +39,4 @@ services:
       - 8443:443
     environment:
         DATABASE_HOST: mysql
-    restart: always    
+    restart: unless-stopped    
