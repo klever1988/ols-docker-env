@@ -33,7 +33,7 @@ services:
       - ./sites:/var/www/vhosts/
       - ./acme:/root/.acme.sh/
       - ./logs:/usr/local/lsws/logs/
-      - ./php.ini:/usr/local/lsws/${PHP_VERSION}/etc/php/${PHP_TAG}/mods-available/99-php.ini
+      - ./custom/php.ini:/usr/local/lsws/${PHP_VERSION}/etc/php/${PHP_TAG}/mods-available/99-php.ini
     ports:
       - 80:80
       - 443:443
